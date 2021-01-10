@@ -47,6 +47,68 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA0B37E525AB0A2E00EEA174 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA0B37EF25AB0AE200EEA174 /* Parents */,
+				FA12FB2625A2287500A6A681 /* ViewController.swift */,
+				FA936F3B25A317B5006E9DD5 /* MapViewController.swift */,
+				FA0B37EB25AB0A7900EEA174 /* TableViewCells */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FA0B37E825AB0A4E00EEA174 /* storyBoards */ = {
+			isa = PBXGroup;
+			children = (
+				FA12FB2825A2287500A6A681 /* Main.storyboard */,
+			);
+			path = storyBoards;
+			sourceTree = "<group>";
+		};
+		FA0B37E925AB0A6800EEA174 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA936F3825A31718006E9DD5 /* UsersDataModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FA0B37EB25AB0A7900EEA174 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				FA936F4225A319C1006E9DD5 /* UserTableViewCell.swift */,
+				FA936F4325A319C1006E9DD5 /* UserTableViewCell.xib */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		FA0B37EC25AB0A8C00EEA174 /* NetworkingLayer */ = {
+			isa = PBXGroup;
+			children = (
+				FA936F4725A31E22006E9DD5 /* DataManager.swift */,
+			);
+			path = NetworkingLayer;
+			sourceTree = "<group>";
+		};
+		FA0B37EE25AB0ABB00EEA174 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FA12FB2B25A2287600A6A681 /* Assets.xcassets */,
+				FA12FB2D25A2287600A6A681 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FA0B37EF25AB0AE200EEA174 /* Parents */ = {
+			isa = PBXGroup;
+			children = (
+				FA12FB2225A2287500A6A681 /* AppDelegate.swift */,
+				FA12FB2425A2287500A6A681 /* SceneDelegate.swift */,
+			);
+			path = Parents;
+			sourceTree = "<group>";
+		};
 		FA12FB1625A2287500A6A681 = {
 			isa = PBXGroup;
 			children = (
@@ -66,18 +128,12 @@
 		FA12FB2125A2287500A6A681 /* Test Combining */ = {
 			isa = PBXGroup;
 			children = (
-				FA12FB2225A2287500A6A681 /* AppDelegate.swift */,
-				FA12FB2425A2287500A6A681 /* SceneDelegate.swift */,
-				FA12FB2625A2287500A6A681 /* ViewController.swift */,
-				FA12FB2825A2287500A6A681 /* Main.storyboard */,
-				FA12FB2B25A2287600A6A681 /* Assets.xcassets */,
-				FA12FB2D25A2287600A6A681 /* LaunchScreen.storyboard */,
 				FA12FB3025A2287600A6A681 /* Info.plist */,
-				FA936F3825A31718006E9DD5 /* UsersDataModel.swift */,
-				FA936F3B25A317B5006E9DD5 /* MapViewController.swift */,
-				FA936F4225A319C1006E9DD5 /* UserTableViewCell.swift */,
-				FA936F4325A319C1006E9DD5 /* UserTableViewCell.xib */,
-				FA936F4725A31E22006E9DD5 /* DataManager.swift */,
+				FA0B37E525AB0A2E00EEA174 /* ViewControllers */,
+				FA0B37E925AB0A6800EEA174 /* Models */,
+				FA0B37EC25AB0A8C00EEA174 /* NetworkingLayer */,
+				FA0B37E825AB0A4E00EEA174 /* storyBoards */,
+				FA0B37EE25AB0ABB00EEA174 /* Resources */,
 			);
 			path = "Test Combining";
 			sourceTree = "<group>";

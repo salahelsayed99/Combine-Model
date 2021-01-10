@@ -27,15 +27,19 @@ class ViewController: UIViewController{
         tableView.register(UINib(nibName: "UserTableViewCell", bundle: nil), forCellReuseIdentifier: "UserTableViewCell")
         fetchUsersData()
     }
+    
 
     
+    
     func fetchUsersData(){
-        userSubscriber = DataManager().publisher.sink(receiveCompletion: {_ in}, receiveValue: { (users) in
+        let dataManager = DataManager(requestURL: "https://jsonplaceholder.typicode.com/users", requestMethod: .get, parameters: nil)
+        dataManager.isCompleteURL = true
+        userSubscriber = dataManager.startRequest(type: [User]()).sink(receiveCompletion: {_ in}, receiveValue: { (users) in
             self.users = users
             self.tableView.reloadData()
         })
     }
-
+    
 }
 
 
@@ -46,9 +50,7 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "UserTableViewCell", for: indexPath) as! UserTableViewCell
-        
         cell.userName.text = users[indexPath.row].username
         cell.fullName.text = users[indexPath.row].name
         
